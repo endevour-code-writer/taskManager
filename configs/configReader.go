@@ -12,16 +12,16 @@ const (
 
 type Configuration struct {
 	Database DatabaseConfig
-	Server ServerConfig
+	Server   ServerConfig
 }
 
 type DatabaseConfig struct {
-	Driver string
-	Host string
-	Name string
-	Port int
-	User string
-	Password string
+	Driver         string
+	Host           string
+	Name           string
+	Port           int
+	User           string
+	Password       string
 	MigrationsPath string
 }
 
@@ -31,7 +31,7 @@ type ServerConfig struct {
 
 var configuration Configuration
 
-func init()  {
+func init() {
 	viper.SetConfigName(configFileName)
 	viper.AddConfigPath(configFilePath)
 
@@ -71,4 +71,3 @@ func GetInitConfig() Configuration {
 //func (dbConfig DatabaseConfig) GetPassword() string  {
 //	return dbConfig.Password
 //}
-

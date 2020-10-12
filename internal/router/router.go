@@ -8,7 +8,7 @@ import (
 var router Router
 
 type Router struct {
-    RoutesMultiplexer *chi.Mux
+	RoutesMultiplexer *chi.Mux
 }
 
 func Init() Router {

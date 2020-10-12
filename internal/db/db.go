@@ -9,7 +9,7 @@ import (
 )
 
 type Database struct {
-	DB *sql.DB
+	DB       *sql.DB
 	dbConfig configs.DatabaseConfig
 }
 
@@ -50,11 +50,10 @@ func (db Database) Close() {
 	db.DB.Close()
 }
 
-func (db Database) GetDriver() string  {
+func (db Database) GetDriver() string {
 	return db.dbConfig.Driver
 }
 
-func (db Database) GetMigrationPath() string  {
+func (db Database) GetMigrationPath() string {
 	return db.dbConfig.MigrationsPath
 }
-
