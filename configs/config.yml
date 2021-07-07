@@ -1,0 +1,10 @@
+database:
+  driver: postgres
+  host: localhost
+  name: test_db
+  port: 5432
+  user: test_user
+  password: securep@ss_here
+  migrationsPath : file://../../internal/db/migrations
+server:
+  port: 8080
